@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <title>Oferta Aceptada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #e0c080;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        footer {
+            background-color: #e0c080;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+        .background-lines {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background: linear-gradient(to right, #e0c080 50%, #f0f0f0 50%);
+            background-size: 10px 100%;
+            background-repeat: repeat-y;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-lines"></div>
+    <div class="container">
+        <header>
+            <img src="{% static 'logo.png' %}" alt="Bank Logo" style="max-width: 200px;">
+            <h2>Oferta Aceptada</h2>
+        </header>
+        <main>
+            <p>Felicitaciones, {{ nombre_cliente }}! Su oferta ha sido aceptada con éxito.</p>
+        </main>
+        <footer>
+            &copy; 2024 Banco de los Alpes. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
